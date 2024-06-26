@@ -17,12 +17,12 @@
         "step": "importWordPressFiles",
           "wordPressFilesZip": {
               "resource": "url",
-              "url": "https://mysite.com/import.zip"
+              "url": "https://wordpresstheme.amnesty.org/UploadsAndContent-TO-DO-File-Does-Not-Exist-Yet.zip"
 		  }
         "step": "importWxr",
           "file": {
               "resource": "url",
-              "url": "https://your-site.com/starter-content.wxr"
+              "url": "https://wordpresstheme.amnesty.org/starter-content-TO-DO-File-Does-Not-Exist-Yet.wxr"
 		  }
         "step": "activateTheme",
           "themeFolderName": "Humanity"
