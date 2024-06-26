@@ -17,7 +17,7 @@ Whats in the blue print
 
 
 Link to blue print 
-https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/amnestywebsite/humanity-blueprint/trunk/main/blueprint.json
+https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/amnestywebsite/humanity-blueprint/main/blueprint.json
 
 https://wordpress.org/playground/
 https://wordpress.github.io/wordpress-playground/blueprints-api/index 
