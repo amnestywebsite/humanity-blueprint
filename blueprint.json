@@ -1,15 +1,26 @@
 {
-    "$schema": "https://playground.wordpress.net/blueprint-schema.json",
-      "preferredVersions": {
-        "php": "8.2",
-        "wp": "6.4"
+  "$schema": "https://playground.wordpress.net/blueprint-schema.json",
+  "preferredVersions": {
+    "php": "8.2",
+    "wp": "6.4"
+  },
+  "siteOptions": {
+    "blogname": "Humanity Theme"
+  },
+  "steps": [
+    {
+      "step": "installTheme",
+      "themeZipFile": {
+        "resource": "url",
+        "url": "https://raw.githubusercontent.com/amnestywebsite/humanity-blueprint/main/humanity-theme.zip"
+      }
     },
-    "siteOptions": {
-        "blogname": "Humanity Theme"
+    {
+      "step": "wp-cli",
+      "command": "wp post create --post_title='Test post' --post_excerpt='Some content'"
     },
-    "steps": [
-		{
-        "step": "login"
-     }
-    ]
+    {
+      "step": "login"
+    }
+  ]
 }
