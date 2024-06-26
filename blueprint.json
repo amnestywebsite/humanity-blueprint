@@ -1,0 +1,40 @@
+{
+    "$schema": "https://playground.wordpress.net/blueprint-schema.json",
+      "preferredVersions": {
+        "php": "8.2",
+        "wp": "6.4"
+    }
+    "login": true,
+    "siteOptions": {
+        "blogname": "Humanity Theme"
+    },
+
+	"steps": [
+		{
+			"step": "login",
+			"username": "admin",
+			"password": "password"
+      "step": "enableMultisite"
+    }
+	]
+  TODO get get a clean zip of the content and uploads folders and link to it 
+	"steps": [
+		{
+      "step": "importWordPressFiles",
+          "wordPressFilesZip": {
+              "resource": "url",
+              "url": "https://mysite.com/import.zip" 
+       }
+	]
+  TODO get get clean place holder XML content and link to it 
+  	"steps": [
+		{
+      "step": "importWxr",
+        "file": {
+          "resource": "url",
+          "url": "https://your-site.com/starter-content.wxr" 
+      "step": "activateTheme",
+          "themeFolderName": "Humanity"
+        }
+    ]
+}
