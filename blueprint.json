@@ -3,8 +3,7 @@
       "preferredVersions": {
         "php": "8.2",
         "wp": "6.4"
-    }
-    "login": true,
+    },
     "siteOptions": {
         "blogname": "Humanity Theme"
     },
