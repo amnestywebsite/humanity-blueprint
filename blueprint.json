@@ -11,7 +11,7 @@
 		{
         "step": "login",
             "username": "admin",
-            "password": "password"
+            "password": "password",
         "step": "enableMultisite"
      }
     ]
