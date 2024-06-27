@@ -20,5 +20,8 @@ Whats in the blue print - Nothing yet
 [Load our theme in your browser](https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/amnestywebsite/humanity-blueprint/main/blueprint.json)
 
 
-https://wordpress.org/playground/
-https://wordpress.github.io/wordpress-playground/blueprints-api/index 
+https://wordpress.org/playground/   
+https://wordpress.github.io/wordpress-playground/blueprints-api/index    
+https://tidy.js.org/json/    
+https://playground.wordpress.net/demos/wp-cli.html    
+https://developer.wordpress.org/cli/commands/    
