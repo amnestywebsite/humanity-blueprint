@@ -9,7 +9,7 @@
       "demo"
     ]
   },
-  "landingPage": "/wp-admin/network/",
+  "landingPage": "/wp-admin/",
   "preferredVersions": {
     "php": "8.2",
     "wp": "6.4"
