@@ -53,21 +53,11 @@
     },
     {
       "step": "wp-cli",
-      "command": "wp post create --post_title='Test post' --post_excerpt='Some content'"
-    },
-    {
-      "step": "wp-cli",
       "command": "wp post generate --count=12 --post_type=post --post_date=1999-01-04"
     },
     {
       "step": "wp-cli",
       "command": "wp theme enable humanity-theme --network"
-    },
-    {
-      "step": "setSiteOptions",
-      "options": {
-        "WPLANG": "ja_JA"
-      }
     }
   ]
 }
