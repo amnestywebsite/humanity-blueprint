@@ -33,7 +33,7 @@
             "step": "installTheme",
             "themeZipFile": {
                 "resource": "url",
-                "url": "https://raw.githubusercontent.com/amnestywebsite/humanity-blueprint/main/humanity-theme.zip"
+                "url": "https://github-proxy.com/proxy/?repo=https://github.com/amnestywebsite/humanity-theme/"
             },
             "progress": {
                 "weight": 2,
