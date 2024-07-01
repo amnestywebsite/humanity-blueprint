@@ -33,13 +33,18 @@
             "step": "installTheme",
             "themeZipFile": {
                 "resource": "url",
-                "url": "https://github-proxy.com/proxy/?repo=https://github.com/amnestywebsite/humanity-theme/"
+                "url": "https://github-proxy.com/proxy/?repo=amnestywebsite/humanity-theme/"
             },
             "progress": {
                 "weight": 2,
                 "caption": "Importing the Humanity theme"
             }
         },
+        {
+			"step": "mv",
+			"fromPath": "/wordpress/wp-content/themes/humanity-theme-main",
+			"toPath": "/wordpress/wp-content/themes/humanity-theme"
+		},
         {
             "step": "installPlugin",
             "pluginZipFile": {
