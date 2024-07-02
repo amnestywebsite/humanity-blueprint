@@ -27,24 +27,34 @@
     "login": true,
     "steps": [
         {
+            "step": "login",
+            "username": "admin",
+            "password": "password"
+        },
+        {
             "step": "enableMultisite"
         },
         {
-            "step": "installTheme",
-            "themeZipFile": {
+            "step": "mkdir",
+            "path": "/tmp/humanity-theme"
+        },
+        {
+            "step": "unzip",
+            "extractToPath": "/tmp/humanity-theme",
+            "zipFile": {
                 "resource": "url",
-                "url": "https://github-proxy.com/proxy/?repo=amnestywebsite/humanity-theme/"
-            },
-            "progress": {
-                "weight": 2,
-                "caption": "Importing the Humanity theme"
+                "url": "https://github-proxy.com/proxy/?repo=amnestywebsite/humanity-theme&release=v1.0.3&asset=humanity-theme.zip"
             }
         },
         {
-			"step": "mv",
-			"fromPath": "/wordpress/wp-content/themes/humanity-theme-main",
-			"toPath": "/wordpress/wp-content/themes/humanity-theme"
-		},
+            "step": "mv",
+            "fromPath": "/tmp/humanity-theme",
+            "toPath": "/wordpress/wp-content/themes/humanity-theme"
+        },
+        {
+            "step": "activateTheme",
+            "themeFolderName": "humanity-theme"
+        },
         {
             "step": "installPlugin",
             "pluginZipFile": {
