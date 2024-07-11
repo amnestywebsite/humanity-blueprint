@@ -55,7 +55,11 @@
     },
     {
       "step": "wp-cli",
-      "command": "wp theme activate --network humanity-theme"
+      "command": "wp theme enable humanity-theme --network"
+    },
+    {
+      "step": "wp-cli",
+      "command": "wp theme activate humanity-theme"
     },
     {
       "step": "installPlugin",
