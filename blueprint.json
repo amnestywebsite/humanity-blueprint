@@ -1,81 +1,87 @@
 {
-    "$schema": "https://playground.wordpress.net/blueprint-schema.json",
-    "meta": {
-        "title": "The Amnesty Humanity WordPress thme Playground",
-        "description": "A demo enviroment for our Humanity theme",
-        "author": "Humanity",
-        "categories": [
-            "theme",
-            "demo"
-        ]
-    },
-    "landingPage": "/wp-admin/",
-    "preferredVersions": {
-        "php": "8.2",
-        "wp": "6.4"
-    },
-    "features": {
-        "networking": true
-    },
-    "phpExtensionBundles": [
-        "kitchen-sink"
-    ],
-    "siteOptions": {
-        "blogname": "Humanity Theme",
-        "blogdescription": "Free and open source WordPRess theme for humanity"
-    },
-    "login": true,
-    "steps": [
-        {
-            "step": "login",
-            "username": "admin",
-            "password": "password"
-        },
-        {
-            "step": "enableMultisite"
-        },
-        {
-            "step": "mkdir",
-            "path": "/tmp/humanity-theme"
-        },
-        {
-            "step": "unzip",
-            "extractToPath": "/tmp/humanity-theme",
-            "zipFile": {
-                "resource": "url",
-                "url": "https://github-proxy.com/proxy/?repo=amnestywebsite/humanity-theme&release=v1.1.1&asset=humanity-theme.zip"
-            }
-        },
-        {
-            "step": "mv",
-            "fromPath": "/tmp/humanity-theme",
-            "toPath": "/wordpress/wp-content/themes/humanity-theme"
-        },
-        {
-            "step": "activateTheme",
-            "themeFolderName": "humanity-theme"
-        },
-        {
-            "step": "installPlugin",
-            "pluginZipFile": {
-                "resource": "wordpress.org/plugins",
-                "slug": "cmb2"
-            }
-        },
-        {
-            "step": "updateUserMeta",
-            "meta": {
-                "admin_color": "sunrise"
-            },
-            "userId": 1
-        },
-        {
-            "step": "wp-cli",
-            "command": "wp post generate --count=12 --post_type=post --post_date=1999-01-04"
-        },
-        {
-            "step": "wp-cli",
-            "command": "wp theme enable humanity-theme --network"
-        }
+  "$schema": "https://playground.wordpress.net/blueprint-schema.json",
+  "meta": {
+    "title": "The Amnesty Humanity WordPress thme Playground",
+    "description": "A demo enviroment for our Humanity theme",
+    "author": "Humanity",
+    "categories": [
+      "theme",
+      "demo"
     ]
+  },
+  "landingPage": "/wp-admin/post.php?post=2&action=edit",
+  "preferredVersions": {
+    "php": "8.2",
+    "wp": "6.4"
+  },
+  "features": {
+    "networking": true
+  },
+  "phpExtensionBundles": [
+    "kitchen-sink"
+  ],
+  "siteOptions": {
+    "blogname": "Humanity Theme",
+    "blogdescription": "Free and open source WordPRess theme for humanity",
+    "show_on_front": "page",
+    "page_on_front": "2"
+  },
+  "login": true,
+  "steps": [
+    {
+      "step": "login",
+      "username": "admin",
+      "password": "password"
+    },
+    {
+      "step": "enableMultisite"
+    },
+    {
+      "step": "mkdir",
+      "path": "/tmp/humanity-theme"
+    },
+    {
+      "step": "unzip",
+      "extractToPath": "/tmp/humanity-theme",
+      "zipFile": {
+        "resource": "url",
+        "url": "https://github-proxy.com/proxy/?repo=amnestywebsite/humanity-theme&release=v1.1.1&asset=humanity-theme.zip"
+      }
+    },
+    {
+      "step": "mv",
+      "fromPath": "/tmp/humanity-theme",
+      "toPath": "/wordpress/wp-content/themes/humanity-theme"
+    },
+    {
+      "step": "wp-cli",
+      "command": "wp theme activate --network humanity-theme"
+    },
+    {
+      "step": "installPlugin",
+      "pluginZipFile": {
+        "resource": "wordpress.org/plugins",
+        "slug": "cmb2"
+      }
+    },
+    {
+      "step": "updateUserMeta",
+      "meta": {
+        "admin_color": "sunrise"
+      },
+      "userId": 1
+    },
+    {
+      "step": "wp-cli",
+      "command": "wp post generate --count=12 --post_type=post --post_date=1999-01-04"
+    },
+    {
+      "step": "wp-cli",
+      "command": "wp post update 2 --post_title='Humanity Theme Playground Demo' https://raw.githubusercontent.com/amnestywebsite/humanity-blueprint/main/sample-content.html"
+    },
+    {
+      "step": "wp-cli",
+      "command": "wp media import https://raw.githubusercontent.com/amnestywebsite/humanity-blueprint/main/jan-kronies-Ao1MeLnG_kY-unsplash.jpg --post_id=2 --featured_image"
+    }
+  ]
 }
