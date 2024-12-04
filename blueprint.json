@@ -62,7 +62,7 @@
       "command": "wp theme activate humanity-theme"
     },
     {
-      "step": "installPlugin",
+      "step": "pluginData",
       "pluginZipFile": {
         "resource": "wordpress.org/plugins",
         "slug": "cmb2"
