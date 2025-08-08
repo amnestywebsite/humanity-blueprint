@@ -5,7 +5,7 @@
     "description": "A demo environment for our Humanity theme",
     "author": "Humanity"
   },
-  "landingPage": "/wp-admin/plugins.php",
+  "landingPage": "http://wp-admin/post.php?post=4&action=edit",
   "preferredVersions": {
     "php": "8.2",
     "wp": "6.4"
