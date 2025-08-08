@@ -45,7 +45,7 @@
       "extractToPath": "/tmp/humanity-theme",
       "zipFile": {
         "resource": "url",
-        "url": "https://github-proxy.com/proxy/?repo=amnestywebsite/humanity-theme&release=v1.1.1&asset=humanity-theme.zip"
+        "url": "https://amnestywebsite.github.io/humanity-blueprint/humanity-theme.zip"
       }
     },
     {
